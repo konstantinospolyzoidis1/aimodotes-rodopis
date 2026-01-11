@@ -4,47 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Εθελοντές Αιμοδότες Ροδόπης</title>
+<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: {} } };
 </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: sans-serif; }
+  body { font-family: 'Poppins', sans-serif; }
+  html { scroll-behavior: smooth; }
 </style>
 </head>
 <body class="bg-white text-gray-800 transition-colors duration-500">
 
 <!-- Navbar -->
-<nav class="bg-[#E63946] text-white p-4 fixed w-full z-50 shadow flex justify-between items-center">
+<nav class="bg-[#8B0000] text-white p-4 fixed w-full z-50 shadow flex justify-between items-center">
   <a href="#" class="font-bold text-xl">Εθελοντές Αιμοδότες Ροδόπης</a>
   <div class="space-x-4">
     <a href="#about" class="hover:underline">Σχετικά</a>
-    <a href="#donation" class="hover:underline">Αιμοδοσία</a>
     <a href="#blood" class="hover:underline">Το Αίμα</a>
-    <a href="#info" class="hover:underline">Ιατρικά</a>
+    <a href="#donation" class="hover:underline">Αιμοδοσία</a>
+    <a href="#volunteers" class="hover:underline">Εθελοντές</a>
     <a href="#actions" class="hover:underline">Δράσεις</a>
     <a href="#join" class="hover:underline">Γίνε Μέλος</a>
-    <button id="darkModeToggle" class="ml-4 bg-white text-[#E63946] px-3 py-1 rounded hover:bg-gray-200">Dark Mode</button>
+    <button id="darkModeToggle" class="ml-4 bg-white text-[#8B0000] px-3 py-1 rounded hover:bg-gray-200 transition">Dark Mode</button>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="pt-24 pb-20 text-center bg-[#E63946] text-white">
+<section class="pt-24 pb-20 text-center bg-[#8B0000] text-white">
   <h1 class="text-5xl font-bold mb-4">Δώσε Αίμα – Σώσε Ζωές</h1>
   <p class="text-xl mb-6">Το αίμα δεν παράγεται. Προσφέρεται.</p>
-  <a href="#join" class="bg-white text-[#E63946] px-6 py-3 rounded hover:bg-gray-200 transition">Γίνε Αιμοδότης Τώρα</a>
-
-  <!-- Interactive Counters -->
+  <a href="#join" class="bg-white text-[#8B0000] px-6 py-3 rounded hover:bg-gray-200 transition">Γίνε Αιμοδότης Τώρα</a>
   <div class="mt-10 grid md:grid-cols-3 gap-6 text-black">
-    <div class="bg-white p-6 rounded shadow">
+    <div class="bg-white p-6 rounded shadow hover:scale-105 transform transition"> 
       <h2 class="text-3xl font-bold" id="counterLives">0</h2>
       <p>Ζωές Σωσμένες</p>
     </div>
-    <div class="bg-white p-6 rounded shadow">
+    <div class="bg-white p-6 rounded shadow hover:scale-105 transform transition">
       <h2 class="text-3xl font-bold" id="counterDonations">0</h2>
       <p>Δωρεές Αίματος</p>
     </div>
-    <div class="bg-white p-6 rounded shadow">
+    <div class="bg-white p-6 rounded shadow hover:scale-105 transform transition">
       <h2 class="text-3xl font-bold" id="counterVolunteers">0</h2>
       <p>Εθελοντές</p>
     </div>
@@ -53,20 +55,59 @@
 
 <!-- About Section -->
 <section id="about" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Σχετικά με Εμάς</h2>
+  <h2 class="text-3xl font-bold mb-6 text-[#8B0000]">Σχετικά με Εμάς</h2>
   <p class="mb-4">Οι Εθελοντές Αιμοδότες Ροδόπης είναι ένα δυναμικό δίκτυο πολιτών που προσφέρουν αίμα, γνώση και υποστήριξη σε όσους έχουν ανάγκη. Το έργο μας βασίζεται στην αξία της εθελοντικής προσφοράς και της κοινωνικής ευθύνης.</p>
-  <p class="mb-4">Η αποστολή μας περιλαμβάνει ενημέρωση του κοινού, οργάνωση αιμοδοσιών, και στήριξη των αιμοδοτών ώστε η διαδικασία να είναι ασφαλής, άνετη και αποτελεσματική.</p>
-  <p>Η αιμοδοσία σώζει ζωές και ενδυναμώνει την κοινωνία μας.</p>
+  <p class="mb-4">Η αποστολή μας περιλαμβάνει ενημέρωση του κοινού, οργάνωση αιμοδοσιών και στήριξη των αιμοδοτών ώστε η διαδικασία να είναι ασφαλής, άνετη και αποτελεσματική. Η αιμοδοσία σώζει ζωές και ενδυναμώνει την κοινωνία μας.</p>
+</section>
+
+<!-- Blood Section -->
+<section id="blood" class="bg-gray-100 py-16 px-4">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-[#8B0000]">Το Αίμα: Σύνθεση, Λειτουργίες και Αξιοποίηση στην Αιμοδοσία</h2>
+    <p class="mb-4">Το αίμα αποτελεί έναν από τους πιο ζωτικούς ιστούς του ανθρώπινου οργανισμού. Κυκλοφορεί συνεχώς μέσα στα αγγεία, διατηρώντας τη ζωή και τις λειτουργίες κάθε κυττάρου. Αν και συνήθως το αντιλαμβανόμαστε ως κόκκινο υγρό, πρόκειται για ένα πολύπλοκο σύστημα με διαφορετικά στοιχεία, καθένα με συγκεκριμένο ρόλο και λειτουργία.</p>
+
+    <h3 class="text-xl font-semibold mt-6">Σύνθεση του αίματος</h3>
+    <p class="mb-4">Το αίμα αποτελείται από δύο βασικά μέρη: το πλάσμα και τα κυτταρικά στοιχεία.</p>
+    <ul class="list-disc list-inside mb-4">
+      <li><strong>Πλάσμα:</strong> περίπου 55% του όγκου του αίματος. Κυρίως νερό (90%), με πρωτεΐνες (αλβουμίνη, γλοβουλίνες, ινωδογόνο), ηλεκτρολύτες, θρεπτικά συστατικά, ορμόνες και προϊόντα αποβολής.</li>
+      <li><strong>Αλβουμίνη:</strong> διατηρεί οσμωτική πίεση και ρευστότητα.</li>
+      <li><strong>Γλοβουλίνες:</strong> συμμετέχουν στην ανοσολογική άμυνα.</li>
+      <li><strong>Ινωδογόνο:</strong> απαραίτητο για την πήξη.</li>
+    </ul>
+    <ul class="list-disc list-inside mb-4">
+      <li><strong>Ερυθρά αιμοσφαίρια:</strong> μεταφέρουν οξυγόνο και αποβάλλουν CO2.</li>
+      <li><strong>Λευκά αιμοσφαίρια:</strong> υπεύθυνα για την άμυνα ενάντια σε λοιμώξεις.</li>
+      <li><strong>Αιμοπετάλια:</strong> συμμετέχουν στην πήξη και σταματούν την αιμορραγία.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">Λειτουργίες του αίματος</h3>
+    <ul class="list-disc list-inside mb-4">
+      <li><strong>Μεταφορά:</strong> οξυγόνο, θρεπτικά συστατικά, ορμόνες, προϊόντα αποβολής.</li>
+      <li><strong>Άμυνα:</strong> λευκά αιμοσφαίρια και αντισώματα προστατεύουν τον οργανισμό.</li>
+      <li><strong>Ρύθμιση:</strong> θερμοκρασία, pH, οσμωτική πίεση, ομοιόσταση.</li>
+      <li><strong>Πήξη και επούλωση:</strong> σταματούν αιμορραγίες και βοηθούν στην επιδιόρθωση τραυμάτων.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">Το αίμα και η αιμοδοσία</h3>
+    <p class="mb-4">Η αιμοδοσία αξιοποιεί την αξία του αίματος για ιατρικούς σκοπούς. Συλλέγεται από εθελοντές, ελέγχεται και διαχωρίζεται σε:</p>
+    <ul class="list-disc list-inside mb-4">
+      <li>Ερυθρά αιμοσφαίρια</li>
+      <li>Πλάσμα</li>
+      <li>Αιμοπετάλια</li>
+    </ul>
+    <p class="mb-4">Κάθε στοιχείο χρησιμοποιείται ανάλογα με τις ανάγκες των ασθενών. Η αιμοδοσία είναι ασφαλής, σύντομη και χωρίς κίνδυνο.</p>
+    <p class="mb-4"><strong>Αποθήκευση στοιχείων:</strong> Ερυθρά έως 42 ημέρες, Αιμοπετάλια 5–7 ημέρες, Πλάσμα έως 1 έτος.</p>
+    <p>Η εθελοντική αιμοδοσία διασφαλίζει επάρκεια αίματος και καλύπτει ανάγκες σε χειρουργεία, ατυχήματα και έκτακτες καταστάσεις. Κάθε φιάλη αίματος μπορεί να σώσει έως και τρεις ζωές.</p>
+  </div>
 </section>
 
 <!-- Donation Section -->
-<section id="donation" class="bg-[#1e3a8a] text-white py-16 px-4">
+<section id="donation" class="bg-[#8B0000] text-white py-16 px-4">
   <div class="container mx-auto">
     <h2 class="text-3xl font-bold mb-6">Οδηγός Αιμοδοσίας</h2>
-    <p class="mb-4">Η αιμοδοσία είναι μια απλή διαδικασία που όμως έχει τεράστια σημασία για την κοινωνία. Ακολουθείστε τα παρακάτω βήματα για να γίνετε ασφαλής αιμοδότης:</p>
     <ol class="list-decimal list-inside mb-6 space-y-2">
       <li>Υποδοχή & σύντομο ιστορικό υγείας</li>
-      <li>Ιατρικός έλεγχος: μέτρηση πίεσης, αιματολογικός έλεγχος</li>
+      <li>Ιατρικός έλεγχος: πίεση, αιματολογικός έλεγχος</li>
       <li>Αιμοληψία (5–10 λεπτά)</li>
       <li>Ξεκούραση & μικρό κέρασμα</li>
     </ol>
@@ -74,87 +115,61 @@
     <h3 class="font-semibold mt-6">Μύθοι & Αλήθειες</h3>
     <ul class="list-disc list-inside">
       <li>❌ Πονάει → ✔ Ελάχιστη ενόχληση</li>
-      <li>❌ Εξασθενεί τον οργανισμό → ✔ Το σώμα αναπληρώνει γρήγορα</li>
-      <li>❌ Δεν χρειάζεται τόσο συχνά → ✔ Οι ανάγκες για αίμα είναι καθημερινές</li>
+      <li>❌ Εξασθενεί → ✔ Το σώμα αναπληρώνει γρήγορα</li>
+      <li>❌ Δεν χρειάζεται → ✔ Οι ανάγκες είναι καθημερινές</li>
     </ul>
   </div>
 </section>
 
-<!-- Blood Section -->
-<section id="blood" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Όλα για το Αίμα</h2>
-  <p class="mb-4">Το αίμα είναι ζωτικός ιστός του ανθρώπινου σώματος. Μεταφέρει οξυγόνο και θρεπτικά συστατικά, απομακρύνει τις τοξίνες και υποστηρίζει το ανοσοποιητικό σύστημα.</p>
-  <h3 class="font-semibold mt-4">Συστατικά του αίματος:</h3>
-  <ul class="list-disc list-inside mb-4">
-    <li>Ερυθρά αιμοσφαίρια: μεταφέρουν οξυγόνο σε όλα τα κύτταρα</li>
-    <li>Λευκά αιμοσφαίρια: υπεύθυνα για την άμυνα του οργανισμού</li>
-    <li>Αιμοπετάλια: βοηθούν στην πήξη του αίματος</li>
-    <li>Πλάσμα: περιέχει νερό, πρωτεΐνες, θρεπτικά συστατικά, ορμόνες</li>
-  </ul>
-  <h3 class="font-semibold mt-4">Ομάδες αίματος:</h3>
-  <p>Υπάρχουν 4 κύριες ομάδες αίματος: Α, Β, ΑΒ, Ο, με Rh θετικό (+) ή αρνητικό (−). Η γνώση της ομάδας αίματος είναι κρίσιμη για ασφαλείς μεταγγίσεις.</p>
-  <h3 class="font-semibold mt-4">Σημασία της αιμοδοσίας:</h3>
-  <ul class="list-disc list-inside mb-4">
-    <li>Σώζει ζωές σε επείγουσες καταστάσεις, όπως ατυχήματα και χειρουργεία</li>
-    <li>Υποστηρίζει ασθενείς με χρόνιες παθήσεις που χρειάζονται τακτικά αίμα</li>
-    <li>Συνεισφέρει στην κοινωνική συνοχή και αλληλεγγύη</li>
-  </ul>
-</section>
-
-<!-- Info Section -->
-<section id="info" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Ιατρικές Πληροφορίες</h2>
-  <p class="mb-4">Η διαδικασία της αιμοδοσίας είναι απόλυτα ασφαλής. Οι αιμοδότες εξετάζονται πριν από κάθε δωρεά και λαμβάνουν όλες τις απαραίτητες οδηγίες.</p>
-  <p class="mb-4">Πριν δωρίσετε αίμα, φροντίστε να έχετε φάει ελαφρά, να είστε καλά ενυδατωμένοι και να νιώθετε υγιείς.</p>
-  <p>Μετά τη δωρεά, ξεκουραστείτε για λίγα λεπτά και απολαύστε ένα σνακ. Το σώμα σας αναπληρώνει γρήγορα τον όγκο του αίματος.</p>
+<!-- Volunteers Section -->
+<section id="volunteers" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold mb-6 text-[#8B0000]">Εθελοντές Αιμοδότες στη Ροδόπη – Εργο, Σημασία, Στοιχεία</h2>
+  <p class="mb-4">Οι εθελοντές αιμοδότες δίνουν το αίμα τους απρόσκοπτα και χωρίς αμοιβή, καλύπτοντας ιατρικές ανάγκες των ασθενών. Στη Ροδόπη υπάρχουν περίπου 2.000 ενεργοί εθελοντές.</p>
+  <p class="mb-4">Οι μονάδες αίματος που συγκεντρώνουν διατίθενται άμεσα σε νοσοκομεία για χειρουργεία, αιμοκάθαρση, τραυματισμούς και επείγουσες καταστάσεις.</p>
+  <p class="mb-4">Σε εθνικό επίπεδο, η Ελλάδα το 2023 συγκέντρωσε περίπου 378.904 μονάδες από εθελοντική αιμοδοσία, ενώ η χώρα χρειάζεται 550.000–600.000 μονάδες ετησίως.</p>
+  <p>Η συμμετοχή των εθελοντών είναι κρίσιμη για τη σταθερότητα των αποθεμάτων αίματος και τη σωστή λειτουργία των νοσοκομείων.</p>
 </section>
 
 <!-- Actions Section -->
-<section id="actions" class="bg-[#1e3a8a] text-white py-16 px-4">
+<section id="actions" class="bg-gray-100 py-16 px-4">
   <div class="container mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Δράσεις & Εκδηλώσεις</h2>
-    <p class="mb-4">Ο σύλλογος οργανώνει τακτικές αιμοδοσίες, ενημερωτικά σεμινάρια σε σχολεία και κοινότητες, και συνεργάζεται με νοσοκομεία για να καλύψει τις ανάγκες σε αίμα.</p>
+    <h2 class="text-3xl font-bold mb-6 text-[#8B0000]">Δράσεις & Εκδηλώσεις</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-[#E63946] p-6 rounded shadow">Αιμοδοσία σε σχολείο</div>
-      <div class="bg-[#E63946] p-6 rounded shadow">Ενημερωτική εκδήλωση</div>
-      <div class="bg-[#E63946] p-6 rounded shadow">Συνεργασία με νοσοκομεία</div>
+      <div class="bg-[#8B0000] text-white p-6 rounded shadow hover:scale-105 transform transition">Αιμοδοσία σε σχολείο</div>
+      <div class="bg-[#8B0000] text-white p-6 rounded shadow hover:scale-105 transform transition">Ενημερωτική εκδήλωση</div>
+      <div class="bg-[#8B0000] text-white p-6 rounded shadow hover:scale-105 transform transition">Συνεργασία με νοσοκομεία</div>
     </div>
   </div>
 </section>
 
 <!-- Join Section -->
 <section id="join" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Γίνε Μέλος / Αιμοδότης</h2>
+  <h2 class="text-3xl font-bold mb-6 text-[#8B0000]">Γίνε Μέλος / Αιμοδότης</h2>
   <p class="mb-4">Η εθελοντική προσφορά αίματος είναι πράξη ανθρωπιάς. Συμπλήρωσε τη φόρμα για να γίνεις μέλος και να συμμετάσχεις ενεργά στις δράσεις μας.</p>
   <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <input type="text" placeholder="Όνομα" class="p-3 border rounded w-full">
     <input type="text" placeholder="Επώνυμο" class="p-3 border rounded w-full">
     <input type="email" placeholder="Email" class="p-3 border rounded w-full">
     <input type="tel" placeholder="Τηλέφωνο" class="p-3 border rounded w-full">
-    <button class="bg-[#E63946] text-white px-6 py-3 rounded hover:bg-red-700 transition col-span-full">Εγγραφή</button>
+    <button class="bg-[#8B0000] text-white px-6 py-3 rounded hover:bg-red-900 transition col-span-full">Εγγραφή</button>
   </form>
 </section>
 
 <!-- Footer -->
-<footer class="bg-[#1e3a8a] text-white py-6 text-center">
+<footer class="bg-[#8B0000] text-white py-6 text-center">
   © 2026 Εθελοντές Αιμοδότες Ροδόπης. Όλα τα δικαιώματα διατηρούνται.
 </footer>
 
 <!-- Scripts -->
 <script>
-// Dark Mode Toggle
 const toggle = document.getElementById('darkModeToggle');
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('bg-gray-900');
   document.body.classList.toggle('text-gray-100');
 });
 
-// Counters Animation
-const counters = {
-  counterLives: 350,
-  counterDonations: 780,
-  counterVolunteers: 120
-};
+// Counters
+const counters = { counterLives: 350, counterDonations: 780, counterVolunteers: 120 };
 for (const id in counters) {
   let el = document.getElementById(id);
   let count = 0;
