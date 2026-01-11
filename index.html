@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Εθελοντές Αιμοδότες Ροδόπης</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {} } };
+</script>
+<style>
+  body { font-family: sans-serif; }
+</style>
+</head>
+<body class="bg-white text-gray-800 transition-colors duration-500">
+
+<!-- Navbar -->
+<nav class="bg-[#E63946] text-white p-4 fixed w-full z-50 shadow flex justify-between items-center">
+  <a href="#" class="font-bold text-xl">Εθελοντές Αιμοδότες Ροδόπης</a>
+  <div class="space-x-4">
+    <a href="#about" class="hover:underline">Σχετικά</a>
+    <a href="#donation" class="hover:underline">Αιμοδοσία</a>
+    <a href="#info" class="hover:underline">Ιατρικά</a>
+    <a href="#actions" class="hover:underline">Δράσεις</a>
+    <a href="#join" class="hover:underline">Γίνε Μέλος</a>
+    <button id="darkModeToggle" class="ml-4 bg-white text-[#E63946] px-3 py-1 rounded hover:bg-gray-200">Dark Mode</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-24 pb-20 text-center bg-[#E63946] text-white">
+  <h1 class="text-5xl font-bold mb-4">Δώσε Αίμα – Σώσε Ζωές</h1>
+  <p class="text-xl mb-6">Το αίμα δεν παράγεται. Προσφέρεται.</p>
+  <a href="#join" class="bg-white text-[#E63946] px-6 py-3 rounded hover:bg-gray-200 transition">Γίνε Αιμοδότης Τώρα</a>
+
+  <!-- Interactive Counters -->
+  <div class="mt-10 grid md:grid-cols-3 gap-6 text-black">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-3xl font-bold" id="counterLives">0</h2>
+      <p>Ζωές Σωσμένες</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-3xl font-bold" id="counterDonations">0</h2>
+      <p>Δωρεές Αίματος</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-3xl font-bold" id="counterVolunteers">0</h2>
+      <p>Εθελοντές</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Σχετικά με Εμάς</h2>
+  <p class="mb-4">Οι Εθελοντές Αιμοδότες Ροδόπης εργάζονται για την επάρκεια αίματος, την ενημέρωση των πολιτών και τη στήριξη κάθε ανθρώπου που έχει ανάγκη.</p>
+  <p>Η προσφορά αίματος είναι μια απλή πράξη με ανεκτίμητη αξία.</p>
+</section>
+
+<!-- Donation Section -->
+<section id="donation" class="bg-[#1e3a8a] text-white py-16 px-4">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Οδηγός Αιμοδοσίας</h2>
+    <ol class="list-decimal list-inside mb-6 space-y-2">
+      <li>Υποδοχή & σύντομο ιστορικό</li>
+      <li>Ιατρικός έλεγχος</li>
+      <li>Αιμοληψία (5–10 λεπτά)</li>
+      <li>Ξεκούραση & μικρό κέρασμα</li>
+    </ol>
+    <p class="mb-4">Σύνολο χρόνου: περίπου 30 λεπτά.</p>
+  </div>
+</section>
+
+<!-- Info Section -->
+<section id="info" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Ιατρικές Πληροφορίες για το Αίμα</h2>
+  <p class="mb-2">Το αίμα είναι ζωτικός ιστός που μεταφέρει οξυγόνο, θρεπτικά συστατικά και κύτταρα άμυνας.</p>
+  <h3 class="font-semibold mt-4">Συστατικά Αίματος:</h3>
+  <ul class="list-disc list-inside mb-4">
+    <li>Ερυθρά αιμοσφαίρια</li>
+    <li>Λευκά αιμοσφαίρια</li>
+    <li>Αιμοπετάλια</li>
+    <li>Πλάσμα</li>
+  </ul>
+  <h3 class="font-semibold">Ομάδες Αίματος:</h3>
+  <p>Α, Β, ΑΒ, Ο — Rh θετικό (+) / αρνητικό (−)</p>
+</section>
+
+<!-- Actions Section -->
+<section id="actions" class="bg-[#1e3a8a] text-white py-16 px-4">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Δράσεις & Εκδηλώσεις</h2>
+    <p class="mb-4">Συνεργασίες με σχολεία, φορείς και νοσοκομεία για την προώθηση της εθελοντικής αιμοδοσίας.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#E63946] p-6 rounded shadow">Αιμοδοσία σε σχολείο</div>
+      <div class="bg-[#E63946] p-6 rounded shadow">Ενημερωτική εκδήλωση</div>
+      <div class="bg-[#E63946] p-6 rounded shadow">Φωτογραφίες & αποτελέσματα</div>
+    </div>
+  </div>
+</section>
+
+<!-- Join Section -->
+<section id="join" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold mb-6 text-[#E63946]">Γίνε Μέλος / Αιμοδότης</h2>
+  <p class="mb-4">Συμπλήρωσε τη φόρμα και γίνε μέρος της μεγάλης οικογένειας των εθελοντών.</p>
+  <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input type="text" placeholder="Όνομα" class="p-3 border rounded w-full">
+    <input type="text" placeholder="Επώνυμο" class="p-3 border rounded w-full">
+    <input type="email" placeholder="Email" class="p-3 border rounded w-full">
+    <input type="tel" placeholder="Τηλέφωνο" class="p-3 border rounded w-full">
+    <button class="bg-[#E63946] text-white px-6 py-3 rounded hover:bg-red-700 transition col-span-full">Εγγραφή</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#1e3a8a] text-white py-6 text-center">
+  © 2026 Εθελοντές Αιμοδότες Ροδόπης. Όλα τα δικαιώματα διατηρούνται.
+</footer>
+
+<!-- Scripts -->
+<script>
+// Dark Mode Toggle
+const toggle = document.getElementById('darkModeToggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('bg-gray-900');
+  document.body.classList.toggle('text-gray-100');
+});
+
+// Counters Animation
+const counters = {
+  counterLives: 150,
+  counterDonations: 320,
+  counterVolunteers: 75
+};
+for (const id in counters) {
+  let el = document.getElementById(id);
+  let count = 0;
+  let target = counters[id];
+  let interval = setInterval(() => {
+    count += Math.ceil(target/100);
+    if(count >= target) {
+      count = target;
+      clearInterval(interval);
+    }
+    el.innerText = count;
+  }, 20);
+}
+</script>
+
+</body>
+</html>
